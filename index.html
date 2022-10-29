@@ -11,6 +11,174 @@
 
 <body>
 
+    <!-- Revisit flex layout -->
+    <!-- Include a media query for styling -->
+    <!-- Consider dark mode option -->
+    <!-- Use some regex -->
+    <!-- Use form validation -->
+    <!-- Add hover effects -->
+    <!-- Try to format dollars -->
+
+    <div>
+        <div></div>
+        <div>ODIN FOR PRESIDENT</div>
+    </div>
+
+    <div>
+        <p>Odin is running for president. Make a donation to his campaign!</p>
+        <p>You know you want to.</p>
+    </div>
+
+    <div>
+        <p>Let's do this!</p>
+        <form action="#" method="post">
+            <div>
+                <label for="first">First Name</label>
+                <input type="text" name="first" id="first" placeholder="Odin" required>
+            </div>
+            <div>
+                <label for="last">Last Name</label>
+                <input type="text" name="last" id="last" placeholder="Son" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="odinson@theodinproject.top" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" placeholder="555-555-5555" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+            <div>
+                <label for="confirm">Confirm Password</label>
+                <input type="password" name="confirm" id="confirm" placeholder="Confirm password" required>
+            </div>
+            <div>
+                <label for="cardnumber">Credit Card Number</label>
+                <input type="text" name="confirm" id="confirm" value="" required>
+            </div>
+            <div>
+                <label for="amount">Donation Amount</label>
+                <input type="text" name="amount" id="amount" min="1000000" placeholder="1000000" required>
+            </div>
+            <div>
+                <label for="recurring">Recurring donation? (Monthly)</label>
+                <input type="checkbox" required>
+            </div>
+            <button>Submit</button>
+        </form>
+
+    </div>
+
+
+
+
+
 </body>
 
 </html>
+
+<script>
+
+    // $("input[data-type='currency']").on({
+    //     keyup: function () {
+    //         formatCurrency($(this));
+    //     },
+    //     blur: function () {
+    //         formatCurrency($(this), "blur");
+    //     }
+    // });
+
+
+    // function formatNumber(n) {
+    //     // format number 1000000 to 1,234,567
+    //     return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    // }
+
+
+    // function formatCurrency(input, blur) {
+    //     // appends $ to value, validates decimal side
+    //     // and puts cursor back in right position.
+
+    //     // get input value
+    //     var input_val = input.val();
+
+    //     // don't validate empty input
+    //     if (input_val === "") { return; }
+
+    //     // original length
+    //     var original_len = input_val.length;
+
+    //     // initial caret position
+    //     var caret_pos = input.prop("selectionStart");
+
+    //     // check for decimal
+    //     if (input_val.indexOf(".") >= 0) {
+
+    //         // get position of first decimal
+    //         // this prevents multiple decimals from
+    //         // being entered
+    //         var decimal_pos = input_val.indexOf(".");
+
+    //         // split number by decimal point
+    //         var left_side = input_val.substring(0, decimal_pos);
+    //         var right_side = input_val.substring(decimal_pos);
+
+    //         // add commas to left side of number
+    //         left_side = formatNumber(left_side);
+
+    //         // validate right side
+    //         right_side = formatNumber(right_side);
+
+    //         // On blur make sure 2 numbers after decimal
+    //         if (blur === "blur") {
+    //             right_side += "00";
+    //         }
+
+    //         // Limit decimal to only 2 digits
+    //         right_side = right_side.substring(0, 2);
+
+    //         // join number by .
+    //         input_val = "$" + left_side + "." + right_side;
+
+    //     } else {
+    //         // no decimal entered
+    //         // add commas to number
+    //         // remove all non-digits
+    //         input_val = formatNumber(input_val);
+    //         input_val = "$" + input_val;
+
+    //         // final formatting
+    //         if (blur === "blur") {
+    //             input_val += ".00";
+    //         }
+    //     }
+
+    //     // send updated string to input
+    //     input.val(input_val);
+
+    //     // put caret back in the right position
+    //     var updated_len = input_val.length;
+    //     caret_pos = updated_len - original_len + caret_pos;
+    //     input[0].setSelectionRange(caret_pos, caret_pos);
+    // }
+
+
+
+    // const password = document.getElementById("password")
+    // const confirm_password = document.getElementById("confirm_password");
+
+    // function validatePassword() {
+    //     if (password.value != confirm_password.value) {
+    //         confirm_password.setCustomValidity("Passwords Don't Match");
+    //     } else {
+    //         confirm_password.setCustomValidity('');
+    //     }
+    // }
+
+    // password.onchange = validatePassword;
+    // confirm_password.onkeyup = validatePassword;
+</script>
