@@ -8,7 +8,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 form>div {
@@ -20,6 +19,16 @@ form>div {
 #checkbox {
     display: flex;
     flex-direction: row;
+}
+
+#banner {
+    background: no-repeat url("../assets/halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: 100vh;
+    width: 50vw;
+}
+
+#main {
+    width: 50vw;
 }
 
 input:valid {
