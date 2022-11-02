@@ -1,6 +1,9 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 body,
 html {
-    font-family: sans-serif;
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -29,8 +32,9 @@ form>div {
 }
 
 #banner-text {
-    font-size: 1em;
-    color: white
+    font-size: 2em;
+    color: white;
+    display: flex;
 }
 
 #odin {
@@ -46,8 +50,27 @@ form>div {
     width: 50vw;
 }
 
+.text-big {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.text-emphasis {
+    color: rgb(42, 41, 41);
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.text-caveat {
+    font-size: 0.8em;
+}
+
 input:valid {
     border: 2px solid rgb(182, 238, 182)
+}
+
+input:hover {
+    border: 2px solid rgb(135, 135, 222);
 }
 
 label {
