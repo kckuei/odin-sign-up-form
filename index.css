@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Norse-Bold';
-    src: url("assets/fonts/Norse-Bold.otf") format("opentype");
+    src: url("fonts/Norse-Bold.otf") format("opentype");
 }
 
 body {
@@ -35,8 +35,7 @@ form>div {
 }
 
 #banner {
-    /* background: no-repeat url("../assets/images/background.jpg"); */
-    background: no-repeat url("https://kckuei.github.io/odin-sign-up-form/assets/images/background.jpg");
+    background: no-repeat url("../images/background.jpg");
     background-size: cover;
     /*1000px; */
     width: 60%;
