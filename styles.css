@@ -5,6 +5,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    height: 1000px;
 }
 
 body,
@@ -12,7 +13,6 @@ html {
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,9 +36,9 @@ form>div {
 
 #banner {
     background: no-repeat url("../assets/halie-west-25xggax4bSA-unsplash.jpg");
-    background-size: 800px;
+    background-size: 1000px;
     width: 60%;
-    height: 1200px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -76,7 +76,7 @@ span {
 }
 
 #main {
-    /* height: 100%; */
+    height: 100%;
     width: 1000px;
     display: flex;
     flex-direction: column;
@@ -98,6 +98,8 @@ span {
     width: 100%;
     height: 100%;
     background-color: #F9FAFB;
+    display: flex;
+    flex-direction: column;
 }
 
 .text-big {
