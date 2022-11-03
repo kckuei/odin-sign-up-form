@@ -35,8 +35,8 @@ form>div {
 }
 
 #banner {
-    background: no-repeat url("../assets/halie-west-25xggax4bSA-unsplash.jpg");
-    /* background: no-repeat url("kckuei/odin-sign-up-form/docs/assets/alie-west-25xggax4bSA-unsplash.jpg"); */
+    /* background: no-repeat url("../assets/halie-west-25xggax4bSA-unsplash.jpg"); */
+    background: no-repeat url("../img/alie-west-25xggax4bSA-unsplash.jpg");
     background-size: 1000px;
     width: 60%;
     height: 1000px;
