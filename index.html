@@ -28,6 +28,7 @@
             <div class="banner-text">ODIN</div>
             <div class="banner-text president">FOR PRESIDENT</div>
         </div>
+        <div id="credit">Photo by Halie West on Upsplash</div>
     </div>
 
     <div id="main">
@@ -45,11 +46,11 @@
             <form action="#" method="post">
                 <div>
                     <label for="first">FIRST NAME</label>
-                    <input type="text" name="first" id="first" placeholder="Odin" required>
+                    <input type="text" name="first" id="first" placeholder="Odin" min=1 required>
                 </div>
                 <div>
                     <label for="last">LAST NAME</label>
-                    <input type="text" name="last" id="last" placeholder="Son" required>
+                    <input type="text" name="last" id="last" placeholder="Son" min=1 required>
                 </div>
                 <div>
                     <label for="email">EMAIL</label>
@@ -57,19 +58,22 @@
                 </div>
                 <div>
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" name="phone" id="phone" placeholder="555-555-5555" required>
+                    <input type="tel" name="phone" id="phone" placeholder="555-555-5555"
+                        pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
                 </div>
                 <div>
                     <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <input type="password" name="password" id="password" placeholder="Password"
+                        expression="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                 </div>
                 <div>
                     <label for="confirm">CONFIRM PASSWORD</label>
-                    <input type="password" name="confirm" id="confirm" placeholder="Confirm password" required>
+                    <input type="password" name="confirm" id="confirm" placeholder="Confirm password"
+                        expression="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                 </div>
                 <div>
-                    <label for="cardnumber">CREDIT CARD NUMBER</label>
-                    <input type="text" name="confirm" id="confirm" value="" required>
+                    <label for=" cardnumber">CREDIT CARD NUMBER</label>
+                    <input type="text" name="confirm" id="confirm" value="" expression="[0-9]{13,16}" required>
                 </div>
                 <div>
                     <label for="amount">DONATION AMOUNT</label>

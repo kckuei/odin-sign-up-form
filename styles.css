@@ -39,6 +39,9 @@ form>div {
     background-size: 800px;
     width: 60%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .banner-text {
@@ -63,6 +66,8 @@ form>div {
     flex-direction: column;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 100px;
 }
 
 #main {
@@ -79,6 +84,7 @@ form>div {
     margin-left: 1em;
     margin-right: 1em;
     margin-top: 2em;
+    max-width: 25em;
 }
 
 .text-emphasis {
@@ -120,6 +126,12 @@ button {
     width: 75px;
     height: 25px;
     border-radius: 5px;
+}
+
+#credit {
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
 }
 
 /* * {
