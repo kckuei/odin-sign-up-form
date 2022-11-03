@@ -35,8 +35,7 @@ form>div {
 }
 
 #banner {
-    background: no-repeat url("./assets/background.JPG");
-    /* background: no-repeat url("../img/background.jpg"); */
+    background: no-repeat url("../assets/background.jpg");
     background-size: cover;
     /*1000px; */
     width: 60%;
