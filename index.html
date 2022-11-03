@@ -57,17 +57,20 @@
                 <div>
                     <label for="phone">PHONE NUMBER</label>
                     <input type="tel" name="phone" id="phone" placeholder="555-123-4567"
-                        pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+                        pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                        oninvalid="setCustomValidity('Phone number must match format XXX-XXX-XXXX')" required>
                 </div>
                 <div>
                     <label for="password">PASSWORD</label>
                     <input type="password" name="password" id="password" placeholder="Password"
-                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                        oninvalid="setCustomValidity('Password must have UpperCase, LowerCase, Number/SpecialChar and min 8 Chars')"
+                        required>
                 </div>
                 <div>
                     <label for="confirm">CONFIRM PASSWORD</label>
                     <input type="password" name="confirm" id="confirm" placeholder="Confirm password"
-                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                 </div>
                 <div>
                     <label for=" cardnumber">CREDIT CARD NUMBER</label>
@@ -75,7 +78,9 @@
                 </div>
                 <div>
                     <label for="amount">DONATION AMOUNT</label>
-                    <input type="text" name="amount" id="amount" min="1000000" placeholder="1000000" required>
+                    <input type="text" name="amount" id="amount" min="1000000" placeholder="1000000"
+                        oninvalid="setCustomValidity('That amount is too small. You want to be cool, don`t you?')"
+                        required>
                 </div>
                 <div id="checkbox">
                     <label for="recurring">RECURRING DONATION? (MONTHLY)</label>
@@ -97,103 +102,14 @@
 </html>
 
 <script>
+    const password = document.getElementById("password")
+    const confirm_password = document.getElementById("confirm");
 
-    // $("input[data-type='currency']").on({
-    //     keyup: function () {
-    //         formatCurrency($(this));
-    //     },
-    //     blur: function () {
-    //         formatCurrency($(this), "blur");
-    //     }
-    // });
+    function validatePassword() {
+        confirm_password.setCustomValidity(password.value !=
+            confirm_password.value ? "Passwords Don't Match" : '');
+    }
 
-
-    // function formatNumber(n) {
-    //     // format number 1000000 to 1,234,567
-    //     return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-    // }
-
-
-    // function formatCurrency(input, blur) {
-    //     // appends $ to value, validates decimal side
-    //     // and puts cursor back in right position.
-
-    //     // get input value
-    //     var input_val = input.val();
-
-    //     // don't validate empty input
-    //     if (input_val === "") { return; }
-
-    //     // original length
-    //     var original_len = input_val.length;
-
-    //     // initial caret position
-    //     var caret_pos = input.prop("selectionStart");
-
-    //     // check for decimal
-    //     if (input_val.indexOf(".") >= 0) {
-
-    //         // get position of first decimal
-    //         // this prevents multiple decimals from
-    //         // being entered
-    //         var decimal_pos = input_val.indexOf(".");
-
-    //         // split number by decimal point
-    //         var left_side = input_val.substring(0, decimal_pos);
-    //         var right_side = input_val.substring(decimal_pos);
-
-    //         // add commas to left side of number
-    //         left_side = formatNumber(left_side);
-
-    //         // validate right side
-    //         right_side = formatNumber(right_side);
-
-    //         // On blur make sure 2 numbers after decimal
-    //         if (blur === "blur") {
-    //             right_side += "00";
-    //         }
-
-    //         // Limit decimal to only 2 digits
-    //         right_side = right_side.substring(0, 2);
-
-    //         // join number by .
-    //         input_val = "$" + left_side + "." + right_side;
-
-    //     } else {
-    //         // no decimal entered
-    //         // add commas to number
-    //         // remove all non-digits
-    //         input_val = formatNumber(input_val);
-    //         input_val = "$" + input_val;
-
-    //         // final formatting
-    //         if (blur === "blur") {
-    //             input_val += ".00";
-    //         }
-    //     }
-
-    //     // send updated string to input
-    //     input.val(input_val);
-
-    //     // put caret back in the right position
-    //     var updated_len = input_val.length;
-    //     caret_pos = updated_len - original_len + caret_pos;
-    //     input[0].setSelectionRange(caret_pos, caret_pos);
-    // }
-
-
-
-    // const password = document.getElementById("password")
-    // const confirm_password = document.getElementById("confirm_password");
-
-    // function validatePassword() {
-    //     if (password.value != confirm_password.value) {
-    //         confirm_password.setCustomValidity("Passwords Don't Match");
-    //     } else {
-    //         confirm_password.setCustomValidity('');
-    //     }
-    // }
-
-    // password.onchange = validatePassword;
-    // confirm_password.onkeyup = validatePassword;
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
 </script>
