@@ -10,16 +10,6 @@
 </head>
 
 <body>
-
-    <!-- Revisit flex layout -->
-    <!-- Include a media query for styling -->
-    <!-- Consider dark mode option -->
-    <!-- Use some regex -->
-    <!-- Use form validation -->
-    <!-- Add hover effects -->
-    <!-- Try to format dollars -->
-    <!-- need to fix the text wrapping... -->
-
     <div id="banner">
         <div id="logo-container">
             <div>
@@ -28,11 +18,11 @@
             <div class="banner-text">ODIN</div>
             <div class="banner-text president">FOR PRESIDENT</div>
         </div>
-        <div id="credit">Photo by Halie West on Upsplash</div>
+        <div id="credit">Photo by Halie West on <a href="https://unsplash.com/photos/25xggax4bSA">Upsplash</a></div>
     </div>
 
     <div id="main">
-        <div id="intro-text">
+        <div id="main-intro-text">
             <div class="text-big">
                 <p><span>Odin</span> is running for president! Become a supporter and make a donation to his campaign!
                     Just
@@ -51,7 +41,7 @@
                 <p class="text-emphasis">Let's do this!</p>
                 <p class="text-caveat">*Participants must be a resident of Valhalla.</p>
             </div>
-            <form action="#" method="post">
+            <form id="myform" action="#" method="post">
                 <div>
                     <label for="first">FIRST NAME</label>
                     <input type="text" name="first" id="first" placeholder="Thor" min=1 required>
@@ -91,8 +81,13 @@
                     <label for="recurring">RECURRING DONATION? (MONTHLY)</label>
                     <input type="checkbox" checked required>
                 </div>
-                <button>Donate</button>
             </form>
+            <div id="main-bottom">
+                <button type="submit" form="myform">Donate</button>
+                <div id="login-text">Already, a minion?
+                    <a id="login" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Login</a>
+                </div>
+            </div>
         </div>
     </div>
 

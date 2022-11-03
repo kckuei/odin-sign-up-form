@@ -76,13 +76,13 @@ span {
 }
 
 #main {
-    height: 100%;
+    /* height: 100%; */
     width: 1000px;
     display: flex;
     flex-direction: column;
 }
 
-#intro-text {
+#main-intro-text {
     height: 100%;
     width: 100%;
     background-color: #F9FAFB;
@@ -90,6 +90,12 @@ span {
 
 #main-form {
     background-color: #FFFFFF;
+}
+
+#main-bottom {
+    width: 100%;
+    height: 100%;
+    background-color: #F9FAFB;
 }
 
 .text-big {
@@ -113,16 +119,20 @@ span {
 
 form {
     margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 form>div {
     max-width: 250px;
+    margin-right: 2em;
 }
 
 input {
     border-radius: 5px;
     border: 1px solid grey;
     height: 1.4em;
+    font-size: 1em;
 }
 
 input:focus {
@@ -151,12 +161,36 @@ button {
     width: 100px;
     height: 30px;
     border-radius: 5px;
+    margin: 1.5em;
+}
+
+#login-text {
+    margin-left: 1.5em;
+}
+
+#login {
+    font-weight: bold;
+    color: #596D48;
 }
 
 #credit {
     color: white;
     font-size: 0.8em;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+#credit>a {
+    color: white;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #596D48;
 }
 
 /* * {
