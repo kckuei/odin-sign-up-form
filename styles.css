@@ -52,6 +52,11 @@ form>div {
     text-align: center;
 }
 
+span {
+    font-family: 'Norse-Bold';
+    font-size: 1.8em;
+}
+
 .president {
     font-size: 4em;
 }
@@ -120,7 +125,7 @@ label {
 }
 
 button {
-    background-color: rgb(31, 98, 232);
+    background-color: #596D48;
     color: white;
     font-weight: bold;
     width: 75px;
