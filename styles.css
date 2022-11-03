@@ -90,6 +90,8 @@ span {
 
 #main-form {
     background-color: #FFFFFF;
+    box-shadow: 5px 5px 10px lightgrey;
+    margin-bottom: 10px;
 }
 
 #main-bottom {
